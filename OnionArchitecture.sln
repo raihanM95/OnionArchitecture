@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.Service", "OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj", "{3C821996-32F4-422C-9D21-92A19ADDD273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.WebApi", "OnionArchitecture.WebApi\OnionArchitecture.WebApi.csproj", "{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3C821996-32F4-422C-9D21-92A19ADDD273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C821996-32F4-422C-9D21-92A19ADDD273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C821996-32F4-422C-9D21-92A19ADDD273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{8CD05CA5-6670-4FCD-A106-92F5E7A9CD4B} = {EB708757-0EF1-4688-AFEA-7F93DDCDFD35}
 		{2D0885EE-93C7-4ED0-9D1B-B501D3E26DF5} = {B1712C9D-912C-4CE7-8C23-DA76BB32E46D}
 		{3C821996-32F4-422C-9D21-92A19ADDD273} = {B1712C9D-912C-4CE7-8C23-DA76BB32E46D}
+		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB} = {FFCF98E2-FE34-4A2D-A582-79455B3FF96B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CCFA490-E47A-482B-8FFB-4BE4D450379C}
