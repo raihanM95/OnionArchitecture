@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2E086C11-ED7D-4F48-AD5E-BB33566E5EFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{1E010664-8AE5-483A-9FA9-D17AF5F1EF1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7346F83C-5239-495C-8748-33193E09EF0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EB708757-0EF1-4688-AFEA-7F93DDCDFD35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B1712C9D-912C-4CE7-8C23-DA76BB32E46D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FFCF98E2-FE34-4A2D-A582-79455B3FF96B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Domain", "OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{902DEEA7-1A07-404B-B73F-257299273877}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{902DEEA7-1A07-404B-B73F-257299273877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{902DEEA7-1A07-404B-B73F-257299273877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{902DEEA7-1A07-404B-B73F-257299273877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{902DEEA7-1A07-404B-B73F-257299273877}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB708757-0EF1-4688-AFEA-7F93DDCDFD35} = {1E010664-8AE5-483A-9FA9-D17AF5F1EF1A}
+		{B1712C9D-912C-4CE7-8C23-DA76BB32E46D} = {1E010664-8AE5-483A-9FA9-D17AF5F1EF1A}
+		{FFCF98E2-FE34-4A2D-A582-79455B3FF96B} = {1E010664-8AE5-483A-9FA9-D17AF5F1EF1A}
+		{902DEEA7-1A07-404B-B73F-257299273877} = {EB708757-0EF1-4688-AFEA-7F93DDCDFD35}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CCFA490-E47A-482B-8FFB-4BE4D450379C}
+	EndGlobalSection
+EndGlobal
