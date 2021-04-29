@@ -15,15 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FFCF98E2-FE34-4A2D-A582-79455B3FF96B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.WebApi", "OnionArchitecture.WebApi\OnionArchitecture.WebApi.csproj", "{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.WebApi", "OnionArchitecture.WebApi\OnionArchitecture.WebApi.csproj", "{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Application", "OnionArchitecture.Application\OnionArchitecture.Application.csproj", "{E1ADCD01-C34F-4BB0-9EA5-B4C6A1FDEA46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Application", "OnionArchitecture.Application\OnionArchitecture.Application.csproj", "{E1ADCD01-C34F-4BB0-9EA5-B4C6A1FDEA46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.Persistence", "OnionArchitecture.Infrastructure.Persistence\OnionArchitecture.Infrastructure.Persistence.csproj", "{86BB4373-593D-44F7-A23E-0164147CA1A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Infrastructure.Persistence", "OnionArchitecture.Infrastructure.Persistence\OnionArchitecture.Infrastructure.Persistence.csproj", "{86BB4373-593D-44F7-A23E-0164147CA1A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.Service", "OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj", "{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Infrastructure.Shared", "OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Shared.csproj", "{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Domain", "OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Domain", "OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

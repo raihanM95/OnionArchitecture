@@ -8,6 +8,6 @@ namespace OnionArchitecture.Application
     public interface IWrapperRepository
     {
         IProductRepository Product { get; }
-        void Save();
+        //void Save();
     }
 }

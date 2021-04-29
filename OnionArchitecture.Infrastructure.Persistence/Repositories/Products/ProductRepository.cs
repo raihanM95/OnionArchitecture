@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnionArchitecture.Infrastructure.Service.Repositories
+namespace OnionArchitecture.Infrastructure.Persistence.Repositories.Products
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
