@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnionArchitecture.Application;
+using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Infrastructure.Persistence.Contexts;
 using System;
 using System.Collections.Generic;

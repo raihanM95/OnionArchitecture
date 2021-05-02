@@ -1,5 +1,5 @@
-﻿using OnionArchitecture.Application;
-using OnionArchitecture.Application.Interfaces;
+﻿using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.Products;
 using OnionArchitecture.Infrastructure.Persistence.Contexts;
 using OnionArchitecture.Infrastructure.Persistence.Repositories.Products;
 using System;

@@ -1,12 +1,12 @@
-﻿using OnionArchitecture.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnionArchitecture.Domain.Entities
+namespace OnionArchitecture.Application.Features.Products.Queries.GetAllProducts
 {
-    public class Product : AuditableBaseEntity
+    public class GetAllProductsViewModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Barcode { get; set; }
         public string Description { get; set; }

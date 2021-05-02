@@ -1,9 +1,9 @@
-﻿using OnionArchitecture.Application.Interfaces;
+﻿using OnionArchitecture.Application.Interfaces.Products;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnionArchitecture.Application
+namespace OnionArchitecture.Application.Interfaces
 {
     public interface IWrapperRepository
     {
