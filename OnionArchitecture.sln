@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Infrastructure.Persistence", "OnionArchitecture.Infrastructure.Persistence\OnionArchitecture.Infrastructure.Persistence.csproj", "{86BB4373-593D-44F7-A23E-0164147CA1A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Infrastructure.Shared", "OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Shared.csproj", "{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Domain", "OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}"
 EndProject
 Global
@@ -43,10 +41,6 @@ Global
 		{86BB4373-593D-44F7-A23E-0164147CA1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86BB4373-593D-44F7-A23E-0164147CA1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86BB4373-593D-44F7-A23E-0164147CA1A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,7 +56,6 @@ Global
 		{9A4668FA-29A5-4ED0-B8F0-20F09AFE1ACB} = {FFCF98E2-FE34-4A2D-A582-79455B3FF96B}
 		{E1ADCD01-C34F-4BB0-9EA5-B4C6A1FDEA46} = {EB708757-0EF1-4688-AFEA-7F93DDCDFD35}
 		{86BB4373-593D-44F7-A23E-0164147CA1A8} = {B1712C9D-912C-4CE7-8C23-DA76BB32E46D}
-		{8D6C2CBA-8A3B-4777-A074-43F2C9AE6F53} = {B1712C9D-912C-4CE7-8C23-DA76BB32E46D}
 		{A7AF4340-A62B-44B6-8F75-60E03FCFA8B5} = {EB708757-0EF1-4688-AFEA-7F93DDCDFD35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

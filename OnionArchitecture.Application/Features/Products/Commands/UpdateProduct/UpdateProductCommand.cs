@@ -1,43 +1,44 @@
 ﻿using MediatR;
-using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Interfaces.Products;
-using OnionArchitecture.Application.Wrappers;
+using OnionArchitecture.Application.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Features.Products.Commands.UpdateProduct
 {
-    public class UpdateProductCommand : IRequest<Response<int>>
+    public class UpdateProductCommand : IRequest<int>
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Barcode { get; set; }
         public string Description { get; set; }
         public decimal Rate { get; set; }
-        public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Response<int>>
+        public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, int>
         {
-            private readonly IProductRepository _productRepository;
-            public UpdateProductCommandHandler(IProductRepository productRepository)
+            private readonly IApplicationDbContext _context;
+            public UpdateProductCommandHandler(IApplicationDbContext context)
             {
-                _productRepository = productRepository;
+                _context = context;
             }
-            public async Task<Response<int>> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
+            public async Task<int> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
             {
-                var product = await _productRepository.GetByIdAsync(command.Id);
+                var product = _context.Products.Where(a => a.Id == command.Id).FirstOrDefault();
 
                 if (product == null)
                 {
-                    throw new ApiException($"Product Not Found.");
+                    return default;
                 }
                 else
                 {
+                    product.Barcode = command.Barcode;
                     product.Name = command.Name;
                     product.Rate = command.Rate;
                     product.Description = command.Description;
-                    await _productRepository.UpdateAsync(product);
-                    return new Response<int>(product.Id);
+                    await _context.SaveChangesAsync();
+                    return product.Id;
                 }
             }
         }

@@ -1,31 +1,30 @@
 ﻿using MediatR;
-using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Interfaces.Products;
-using OnionArchitecture.Application.Wrappers;
+using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Features.Products.Queries.GetProductById
 {
-    public class GetProductByIdQuery : IRequest<Response<Product>>
+    public class GetProductByIdQuery : IRequest<Product>
     {
         public int Id { get; set; }
-        public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, Response<Product>>
+        public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, Product>
         {
-            private readonly IProductRepository _productRepository;
-            public GetProductByIdQueryHandler(IProductRepository productRepository)
+            private readonly IApplicationDbContext _context;
+            public GetProductByIdQueryHandler(IApplicationDbContext context)
             {
-                _productRepository = productRepository;
+                _context = context;
             }
-            public async Task<Response<Product>> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
+            public async Task<Product> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
             {
-                var product = await _productRepository.GetByIdAsync(query.Id);
-                if (product == null) throw new ApiException($"Product Not Found.");
-                return new Response<Product>(product);
+                var product = _context.Products.Where(a => a.Id == query.Id).FirstOrDefault();
+                if (product == null) return null;
+                return product;
             }
         }
     }

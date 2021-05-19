@@ -1,63 +1,73 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.Features.Products.Commands.CreateProduct;
 using OnionArchitecture.Application.Features.Products.Commands.DeleteProductById;
 using OnionArchitecture.Application.Features.Products.Commands.UpdateProduct;
 using OnionArchitecture.Application.Features.Products.Queries.GetAllProducts;
 using OnionArchitecture.Application.Features.Products.Queries.GetProductById;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace OnionArchitecture.WebApi.Controllers.v1
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
     [ApiVersion("1.0")]
     public class ProductController : BaseApiController
     {
-        // GET: api/<controller>
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] GetAllProductsParameter filter)
+        /// <summary>
+        /// Creates a New Product.
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateProductCommand command)
         {
-
-            return Ok(await Mediator.Send(new GetAllProductsQuery() { PageSize = filter.PageSize, PageNumber = filter.PageNumber }));
+            return Ok(await Mediator.Send(command));
         }
-
-        // GET api/<controller>/5
+        /// <summary>
+        /// Gets all Products.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await Mediator.Send(new GetAllProductsQuery()));
+        }
+        /// <summary>
+        /// Gets Product Entity by Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             return Ok(await Mediator.Send(new GetProductByIdQuery { Id = id }));
         }
-
-        // POST api/<controller>
-        [HttpPost]
-        //[Authorize]
-        public async Task<IActionResult> Post(CreateProductCommand command)
+        /// <summary>
+        /// Deletes Product Entity based on Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            await Mediator.Send(command);
-            return Ok();
+            return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
         }
-
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        [Authorize]
-        public async Task<IActionResult> Put(int id, UpdateProductCommand command)
+        /// <summary>
+        /// Updates the Product Entity based on Id.   
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPut("[action]")]
+        public async Task<IActionResult> Update(int id, UpdateProductCommand command)
         {
             if (id != command.Id)
             {
                 return BadRequest();
             }
             return Ok(await Mediator.Send(command));
-        }
-
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
-        {
-            return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
         }
     }
 }

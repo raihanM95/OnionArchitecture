@@ -16,7 +16,7 @@ namespace OnionArchitecture.Infrastructure.Persistence.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Barcode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Rate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Rate = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),

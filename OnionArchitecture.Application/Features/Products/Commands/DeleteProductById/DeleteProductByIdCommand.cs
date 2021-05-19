@@ -1,31 +1,32 @@
 ﻿using MediatR;
-using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Interfaces.Products;
-using OnionArchitecture.Application.Wrappers;
+using Microsoft.EntityFrameworkCore;
+using OnionArchitecture.Application.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Features.Products.Commands.DeleteProductById
 {
-    public class DeleteProductByIdCommand : IRequest<Response<int>>
+    public class DeleteProductByIdCommand : IRequest<int>
     {
         public int Id { get; set; }
-        public class DeleteProductByIdCommandHandler : IRequestHandler<DeleteProductByIdCommand, Response<int>>
+        public class DeleteProductByIdCommandHandler : IRequestHandler<DeleteProductByIdCommand, int>
         {
-            private readonly IProductRepository _productRepository;
-            public DeleteProductByIdCommandHandler(IProductRepository productRepository)
+            private readonly IApplicationDbContext _context;
+            public DeleteProductByIdCommandHandler(IApplicationDbContext context)
             {
-                _productRepository = productRepository;
+                _context = context;
             }
-            public async Task<Response<int>> Handle(DeleteProductByIdCommand command, CancellationToken cancellationToken)
+            public async Task<int> Handle(DeleteProductByIdCommand command, CancellationToken cancellationToken)
             {
-                var product = await _productRepository.GetByIdAsync(command.Id);
-                if (product == null) throw new ApiException($"Product Not Found.");
-                await _productRepository.DeleteAsync(product);
-                return new Response<int>(product.Id);
+                var product = await _context.Products.Where(a => a.Id == command.Id).FirstOrDefaultAsync();
+                if (product == null) return default;
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+                return product.Id;
             }
         }
     }

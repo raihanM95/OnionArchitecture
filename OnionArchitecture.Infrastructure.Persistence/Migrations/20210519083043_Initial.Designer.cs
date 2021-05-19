@@ -9,8 +9,8 @@ using OnionArchitecture.Infrastructure.Persistence.Contexts;
 
 namespace OnionArchitecture.Infrastructure.Persistence.Migrations
 {
-    [DbContext(typeof(RepositoryContext))]
-    [Migration("20210502061503_Initial")]
+    [DbContext(typeof(ApplicationDbContext))]
+    [Migration("20210519083043_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace OnionArchitecture.Infrastructure.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("OnionArchitecture.Domain.Entities.Product", b =>
@@ -50,7 +50,7 @@ namespace OnionArchitecture.Infrastructure.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
 
