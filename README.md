@@ -18,7 +18,7 @@
 
 <br/>
 
-An Implementation of Repository Pattern with ASP.NET Core 5 Web API. With this Open-Source Template, we create an abstraction layer between the data access and the business logic layer of an application. By using it, we are promoting a more loosely coupled approach to access our data from the database. Also, the code is cleaner and easier to maintain and reuse. Data access logic is in a separate class, or sets of classes called a repository, with the responsibility of persisting the application’s business model.
+An Implementation of Onion Architecture with ASP.NET Core 5 Web API. With this Open-Source Template, we create an abstraction layer between the data access and the business logic layer of an application. By using it, we are promoting a more loosely coupled approach to access our data from the database. Also, the code is cleaner and easier to maintain and reuse. Data access logic is in a separate class, or sets of classes called a repository, with the responsibility of persisting the application’s business model.
 
 Check out the [GitHub](https://github.com/raihanM95/OnionArchitecture) to learn more about this Open Source Project.
 
